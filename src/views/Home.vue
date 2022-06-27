@@ -7,7 +7,7 @@
     <button type="button" @click="getData">Get</button>
     <button type="button" @click="setData">Set</button>
 
-    <select class="form-control" v-model="region" @change="changeRegion">  <!-- :를 사용하면 바로 데이터 영역에 접근할 수 있다. -->
+    <select class="form-control" v-model="region" @change="changeRegion">  
       <option :key="i" :value="item.v" v-for="(item, i) in options">{{item.t}}</option>
     </select>
     <table class="table table-bordered" v-if="!tableShow">
